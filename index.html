@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnimaHub - Registro de Mascotas Para Gente Solitaria (O en sus siglas - AHRMPGS)</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <header>
+        <h1> AnimaHub </h1>
+        <nav>
+            <button id="btn-nuevo">Registrar Mascota</button>
+            <button id="btn-ver">Ver Registro</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="vista-formulario" class="vista activa">
+            <h2>Añadir Nueva Mascota</h2>
+            
+            <form id="form-mascota" novalidate>
+                <div class="grupo-input">
+                    <label for="nombreMascota">Nombre de la Mascota:</label>
+                    <input type="text" id="nombreMascota" name="nombreMascota" placeholder="¿Como se llama la criatura?">
+                    <span class="error-msg" id="error-nombreMascota"></span>
+                </div>
+
+                <div class="grupo-input">
+                    <label for="tipoAnimal">Tipo de Animal:</label>
+                    <input type="text" id="tipoAnimal" name="tipoAnimal" placeholder="Ej. Perro, Gato, Reptil, Avestruz, etc.">
+                    <span class="error-msg" id="error-tipoAnimal"></span>
+                </div>
+
+                <div class="grupo-input">
+                    <label for="edadMascota">Edad (años):</label>
+                    <input type="number" id="edadMascota" name="edadMascota" min="0">
+                    <span class="error-msg" id="error-edadMascota"></span>
+                </div>
+
+                <div class="grupo-input">
+                    <label for="fotoMascota">Foto (URL):</label>
+                    <input type="url" id="fotoMascota" name="fotoMascota" placeholder="https://ejemplo.com/foto.jpg">
+                    <span class="error-msg" id="error-fotoMascota"></span>
+                </div>
+
+                <div class="grupo-input">
+                    <label for="nombreDueno">Nombre del Dueño:</label>
+                    <input type="text" id="nombreDueno" name="nombreDueno">
+                    <span class="error-msg" id="error-nombreDueno"></span>
+                </div>
+
+                <div class="grupo-input">
+                    <label for="residencia">País de Residencia:</label>
+                    <input type="text" id="residencia" name="residencia">
+                    <span class="error-msg" id="error-residencia"></span>
+                </div>
+
+                <button type="submit" id="btn-guardar">Guardar Registro</button>
+            </form>
+        </section>
+
+        <section id="vista-lista" class="vista oculta">
+            <h2>Mascotas Registradas</h2>
+            <div id="contenedor-mascotas" class="grid-mascotas">
+            </div>
+        </section>
+    </main>
+
+    <script src="Scripts/script.js"></script>
+</body>
+</html>
