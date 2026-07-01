@@ -19,6 +19,7 @@
         <section id="vista-formulario" class="vista activa">
             <h2>Añadir Nueva Mascota</h2>
             
+            
             <form id="form-mascota" novalidate>
                 <div class="grupo-input">
                     <label for="nombreMascota">Nombre de la Mascota:</label>
@@ -60,12 +61,31 @@
             </form>
         </section>
 
-        <section id="vista-lista" class="vista oculta">
+<section id="vista-lista" class="vista oculta">
             <h2>Mascotas Registradas</h2>
+            
+            <!-- Acá esta lo nuevo por si acaso -->
+            <div class="grupo-input" style="margin-bottom: 2rem;">
+                <input type="text" id="buscador-mascotas" placeholder="🔍 Buscar mascota por nombre o tipo...">
+            </div>
+
             <div id="contenedor-mascotas" class="grid-mascotas">
             </div>
         </section>
     </main>
+
+    <!-- Reporte para los señores malos -->
+    <div id="modal-reporte" class="modal oculta">
+        <div class="modal-contenido">
+            <h3 style="color: var(--verde-oscuro); margin-bottom: 10px;"> Reportar Mascota</h3>
+            <p style="margin-bottom: 15px;">¿Por qué deseas reportar a esta mascota?</p>
+            <textarea id="motivo-reporte" rows="4" placeholder="Escribe el motivo aquí..." style="width: 100%; padding: 10px; border-radius: 8px; border: 2px solid #e8ede9;"></textarea>
+            <div class="modal-botones" style="display: flex; gap: 10px; margin-top: 15px;">
+                <button id="btn-cancelar-reporte" style="background-color: transparent; border: 2px solid var(--texto-principal); color: var(--texto-principal); width: 50%;">Cancelar</button>
+                <button id="btn-enviar-reporte" style="background-color: var(--error-suave); border: 2px solid var(--error-suave); color: white; width: 50%;">Enviar Reporte</button>
+            </div>
+        </div>
+    </div>
 
     <script type="module" src="Scripts/script.js"></script>
 </body>

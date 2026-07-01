@@ -114,4 +114,36 @@ formMascota.addEventListener('submit', (evento) => {
         inputsExito.forEach(input => input.classList.remove('input-exito'));
         btnVer.click();
     }
+
+    //Buscador de mascotas.
+    const buscadorMascotas = document.getElementById('buscador-mascotas');
+    buscadorMascotas.addEventListener('input', (evento) => {
+        renderizarMascotas(evento.target.value);
+    });
+
+    //Reportar.
+    const modalReporte = document.getElementById('modal-reporte');
+    const btnCancelarReporte = document.getElementById('btn-cancelar-reporte');
+    const btnEnviarReporte = document.getElementById('btn-enviar-reporte');
+    const textMotivo = document.getElementById('motivo-reporte');
+
+    //Cerrar Reporte.
+    btnCancelarReporte.addEventListener('click', () => {
+        modalReporte.classList.add('oculta');
+        textMotivo.value = ''; 
+    });
+
+    //Enviar el reporte
+    btnEnviarReporte.addEventListener('click', () => {
+        if (textMotivo.value.trim() === '') {
+            alert('Por favor, escribe un motivo para el reporte.');
+            return;
+        }
+        
+        alert('Reporte enviado con éxito. El equipo (1) de AnimaHub lo revisará pronto.');
+        
+        // Ocultar y limpiar
+        modalReporte.classList.add('oculta');
+        textMotivo.value = '';
+    });
 });
