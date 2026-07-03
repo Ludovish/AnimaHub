@@ -1,5 +1,8 @@
 import { guardarMascota, renderizarMascotas } from './localStorage.js';
 import { mostrarError, mostrarExito } from './validaciones.js';
+import './auth.js'; 
+import { guardarMascota, renderizarMascotas } from './localStorage.js';
+import { mostrarError, mostrarExito } from './validaciones.js';
 
 //Elementos DOM
 const btnNuevo = document.getElementById('btn-nuevo');

@@ -9,13 +9,38 @@
 <body>
     <header>
         <h1> AnimaHub </h1>
-        <nav>
+        <!-- Modificación: NAV - Perfil de Usuario -->
+        <nav id="menu-principal" class="oculta">
             <button id="btn-nuevo">Registrar Mascota</button>
             <button id="btn-ver">Ver Registro</button>
+            <div style="display: inline-block; background: rgba(255,255,255,0.2); padding: 5px 15px; border-radius: 20px; margin: 0 10px;">
+                 <span id="usuario-activo-nombre">Invitado</span> | Karma: <span id="usuario-activo-karma">0</span>
+            </div>
+            <button id="btn-cerrar-sesion" style="background-color: transparent; border: 1px solid white;">Cerrar Sesión</button>
         </nav>
     </header>
 
     <main>
+        <!-- Mejora: Login -->
+        <section id="vista-login" class="vista activa">
+            <div style="text-align: center; max-width: 400px; margin: 0 auto;">
+                <h2>Ingreso de Usuarios</h2>
+                <p style="margin-bottom: 20px;">Inicia sesión para ver y registrar mascotas.</p>
+                <form id="form-login">
+                    <div class="grupo-input">
+                        <input type="text" id="login-username" placeholder="Nombre de Usuario" required>
+                    </div>
+                    <div class="grupo-input">
+                        <input type="email" id="login-email" placeholder="Correo Electrónico (Solo para registro)" required>
+                    </div>
+                    <div class="grupo-input">
+                        <input type="password" id="login-password" placeholder="Contraseña" required>
+                    </div>
+                    <button type="submit" id="btn-ingresar" style="width: 100%; background-color: var(--verde-hoja); color: white;">Ingresar / Registrarse</button>
+                </form>
+            </div>
+        </section>
+        <!-- Termina aca -->
         <section id="vista-formulario" class="vista activa">
             <h2>Añadir Nueva Mascota</h2>
             
@@ -86,6 +111,9 @@
             </div>
         </div>
     </div>
+
+    <!-- Para la Notificacion LIKE -->
+    <div id="contenedor-notificaciones" style="position: fixed; bottom: 20px; right: 20px; z-index: 9999;"></div>
 
     <script type="module" src="Scripts/script.js"></script>
 </body>
