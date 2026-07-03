@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mascotas - AnimaHub</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/components.css">
+</head>
+<body>
+    <header>
+        <h1> AnimaHub </h1>
+        <nav id="menu-principal">
+            <a href="form.html" id="btn-nuevo" class="btn-nav">Registrar Mascota</a>
+            <a href="main.html" id="btn-ver" class="btn-nav activo">Ver Registro</a>
+            <div style="display: inline-block; background: rgba(255,255,255,0.2); padding: 5px 15px; border-radius: 20px; margin: 0 10px;">
+                 <span id="usuario-activo-nombre">Invitado</span> | Karma: <span id="usuario-activo-karma">0</span>
+            </div>
+            <button id="btn-cerrar-sesion" style="background-color: transparent; border: 1px solid white;">Cerrar Sesión</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="vista-lista" class="vista activa">
+            <h2>Mascotas Registradas</h2>
+            <div class="grupo-input" style="margin-bottom: 2rem;">
+                <input type="text" id="buscador-mascotas" placeholder="🔍 Buscar mascota por nombre o tipo...">
+            </div>
+            <div id="contenedor-mascotas" class="grid-mascotas"></div>
+        </section>
+    </main>
+
+    <div id="modal-reporte" class="modal oculta">... (código del modal reporte) ...</div>
+    <div id="contenedor-notificaciones" style="position: fixed; bottom: 20px; right: 20px; z-index: 9999;"></div>
+
+    <script src="../Scripts/ui.js"></script>
+    <script src="../Scripts/perfil.js"></script> <script src="../Scripts/main.js"></script>
+</body>
+</html>

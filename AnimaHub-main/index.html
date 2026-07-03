@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnimaHub - Ingreso</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <header>
+        <h1>AnimaHub</h1>
+    </header>
+
+    <main>
+        <section id="vista-login" class="vista activa">
+            <div style="text-align: center; max-width: 400px; margin: 40px auto; padding: 20px; border: 2px solid #e8ede9; border-radius: 12px; background: white;">
+                <h2>Ingreso de Usuarios</h2>
+                <p style="margin-bottom: 20px; color: #666;">Inicia sesión para interactuar con la comunidad.</p>
+                
+                <form id="form-login" novalidate>
+                    <div class="grupo-input" style="margin-bottom: 15px;">
+                        <input type="text" id="login-username" placeholder="Nombre de Usuario" style="width: 100%; padding: 10px; border-radius: 6px; border: 1px solid #ccc;">
+                        <span class="error-msg" id="error-login-username" style="color: red; font-size: 12px; display: block; text-align: left; margin-top: 5px;"></span>
+                    </div>
+                    
+                    <div class="grupo-input" style="margin-bottom: 15px;">
+                        <input type="email" id="login-email" placeholder="Correo Electrónico" style="width: 100%; padding: 10px; border-radius: 6px; border: 1px solid #ccc;">
+                        <span class="error-msg" id="error-login-email" style="color: red; font-size: 12px; display: block; text-align: left; margin-top: 5px;"></span>
+                    </div>
+                    
+                    <div class="grupo-input" style="margin-bottom: 15px;">
+                        <input type="password" id="login-password" placeholder="Contraseña" style="width: 100%; padding: 10px; border-radius: 6px; border: 1px solid #ccc;">
+                        <span class="error-msg" id="error-login-password" style="color: red; font-size: 12px; display: block; text-align: left; margin-top: 5px;"></span>
+                    </div>
+                    
+                    <button type="submit" id="btn-ingresar" style="width: 100%; background-color: var(--verde-hoja, #4CAF50); color: white; padding: 12px; border: none; border-radius: 6px; font-weight: bold; cursor: pointer;">Ingresar / Registrarse</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script type="module" src="Scripts/auth.js"></script>
+</body>
+</html>
